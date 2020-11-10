@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background: url('images/body-bg.jpg') no-repeat;
+        }
+
+
+        .phone{
+           border-radius : 35px;
+            border: 10px solid #000;
+            border-top: 25px solid #000;
+            height: 650px;
+            width: 350px;
+           background: url('images/bg.jpg')no-repeat;
+        }
+
+        .header-phone{
+            margin-left: 150px;
+        }
+
+        #reveil, #wifi, #signal, #battery, .batteryPercent {
+            width: 20px;
+            height: 15px;
+            color: #fff;
+        }
+
+        h1, h2, h3, h4 {
+            text-align: center;
+            color:#fff;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        p, #hour {
+            color: #fff;
+        }
+
+       .title {
+           background-color:rgba(0,0,0, 0.2);  
+       }
+    </style>
+   
+</head>
+<body>
+    <h1 class="mt-2 title">Karim's Weather Forecast</h1>
+
+    <div class="container phone mt-5">
+
+        <div class="row">
+            <div class="col-4">
+                <span id="hour"></span>  
+                <img id="reveil" src="images/reveil.png" alt="réveil" style="width: 15px; height:15px; margin-left:5px;">
+            </div>    
+            
+            <div class="col-8 text-right">
+                <img id="wifi" src="images/wifi.png" alt="wifi">
+                <img id="signal" src="images/signal-icon.jpg" alt="signal mobile">
+                <span class="batteryPercent">54%</span>
+                <img id="battery" src="images/batterie1.png" alt="batterie">
+            </div>
+        </div>
+
+        <div class="row mt-5 pt-5">
+            <div id="weather" class="w-100 text-center"></div>
+        </div> 
+        
+        <div class="row">
+            <div id="icons" class="w-100 text-center"></div>
+        </div> 
+
+        <div class="row">
+            <div id="articles" class="w-100 text-center"></div>
+        </div>
+
+        <div class="row mt-5">
+            <div id="googleSearch" class="w-100 p-2"></div>
+        </div>
+        
+        <div class="row mt-5">
+            <form action="index.html" id="form" method="POST" class="container text-center form-group">
+                <p class=" mb-4 text-center">
+                    Entrez une ville de votre choix
+                </p>
+                <div class="row mb-4 p-2">
+                    <input type="text" id="input" class="form-control">
+                </div>
+                
+                <input type="submit" class="btn btn-success btn-lg" value="Valider" id="submit" onClick=cityWeather();>
+            </form>
+        </div>
+
+        <div class="container pt-2">
+            <div class="row mt-5 ml-2">
+                <div class="col-4">
+                    <img  src="images/phone.png" alt="">
+                </div>
+                
+                <div class="col-4">
+                    <img  src="images/mail.png" alt="">
+                </div>
+
+                <div class="col-4">
+                    <img  src="images/chat.png" alt="">
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <script src="js/ajax.js"></script>
+    <script src="js/app.js"></script>
+    
+    
+</body>
+</html>
